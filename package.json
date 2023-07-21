@@ -1,0 +1,20 @@
+{
+  "name": "mern-crud-blog",
+  "version": "1.0.0",
+  "description": "## Intro",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericsecution/mern-crud-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericsecution/mern-crud-blog/issues"
+  },
+  "homepage": "https://github.com/ericsecution/mern-crud-blog#readme"
+}
