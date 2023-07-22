@@ -19,8 +19,11 @@
   },
   "homepage": "https://github.com/ericsecution/mern-crud-blog#readme",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "mongoose": "^7.4.0"
+    "mongodb": "^5.7.0",
+    "mongoose": "^5.13.20",
+    "npm": "^9.8.1"
   },
   "devDependencies": {
     "chai": "^4.3.7",

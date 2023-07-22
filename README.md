@@ -6,7 +6,127 @@ Welcome to my Blog App (with CRUD operations and automated testing). This App wi
 
 Feel free to fork and/or follow along.
 
+## Uhm... MERN?
+
+Yeah, (**M**)ongoDB + (**E**)xpress.js + (**R**)eact.js (**N**)ode.js = **MERN**
+
+Make sense?
+
+What's that you say? You 'have a 6th sense, and that sense is the overwhelming feeling that you're too stupid to ever understand this, and yes, it does increase *that* sense' for you?
+
+Heh, I can relate.
+
+You're probably not "stupid", just ignorant.
+
+And inexperienced. Well, and... idk if it's something that you ate(?), but you kinda smell funny too.
+
+No problem--all fixable. Keep studying. Actually *read* the docs. Keep practicing, searching online for answers, find a mentor, take a shower (although, if you're being mentored in-person, maybe take the shower prior? Don't be afraid: you can control the heat of the water, and you'll have some of your best thinking sessions in there!).
+
+### What's The Solution? The Quick Fix?
+
+There's no "quick" fix, but there is a "quickest" fix.
+
+Keep after it. Hunt down 'understanding' as if it was meat, and your Family was starving. And, I mean, if you want me to make that analogy, it's actually not that far off, right?
+
+Or... you might *be* stupid (and hey, knowing's half the battle!), and even that's ok. It'll just take a little longer to 'get it'. But 'get it' you shall, my friend.
+
+The MERN stack will allow you to become a developer superhero aka a ***full stack developer***.
+
+If you're ready to get started, we need to make sure we've got a few things installed:
+
+`node -v`
+
+`npm -v`
+
+`mongodb -v`
+
+If not, go ahead and `npm install <whatever-you-don't-have>`
+
+If you don't have **Node.js**, however, you may wish to **[visit the npm docs here first](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)**.
+
+You don't *have* to do this, but I also created an Atlas account (it's free). If you want to as well, just **[head over to MongoDB Atlas](https://www.mongodb.com/)**, in order to use their server to host the database.
+
+#### Where Was I...?
+
+Ahh yes, the **MERN** stack. Simple, but there's *a lot* that you could learn about it, so it's kind of a best-of-both-worlds in that it's easy to get started, and there's a lot of room for growth, increased skill, and a lot you can do with it.
+
+Maybe that's a "best-of-*all*-worlds" type situation? Idk.
+
+Anyway, in general, it came about as a (relatively) modern solution to the object-oriented design foundation of a 3-tier architecture in software development--which (you guessed it!) has 3 tiers, made up of our logical layers.
+
+### Layers vs Tiers - "Wait, so... which is which?"
+
+Good question. If you believe the majority of people on dev forums, you'll sometimes limit your perspectives to one comment supported by more than a handful of other people:
+
+> *"... everyone I've met in software world uses these two terms interchangeably as if they are exactly the same."*
+
+Unless you're addicted to the derisive laughter of a ~~nerd~~ engineer, you probably *don't* want to quote that in your next post-work Slack sessions, trying to sound smart.
+
+What good will sounding smart do either of us anyway?
+
+Better just to keep plugging away, be humble, ask questions, ask for help, learn, help others, build up our skills and understanding, and then *be* smart, ya?
+
+I've heard it described (paraphrasing, so dyor, study code, style guides, read books, etc) as:
+
+#### The Difference Between Layers and Tiers
+
+- **Layers** refer to the logic that's literally in your code, how it's structured: folders, files, functions--a logical separation of the code itself.
+  - A presentation layer (your UI)
+  - a business logic layer (where the processing is done)
+  - and a data access layer (the interactions in your code with your database).
+
+ These, of course, all exist within the same application, yeah?
+
+- **Tiers** represent the physical machines or structures that code is fed through:
+  - a Client tier, where the application is presented (like a user's computer)
+  - an application server (where your business logic runs through)
+  - and a database tier (where the actual data is stored).
+
+#### The Stage vs The Theater analogy
+
+**Layers**: Consider a stage with different structured set pieces as backdrops, one stacked behind one another. Each backdrop (or layer) sets a different scene, but they are all part of the same performance's stage setup.
+
+**Tiers**: Now, think of multiple stages in a theater complex. Each stage (or tier) hosts a different play or performance, operating independently of the others.
+
+#### Ok, So What's What In Our MERN Stack?
+
+1. The Presentation Layer - aka: 'Web', 'Interface', 'UI', 'Client' Layer - responsible for handling user interactions and displaying information to the users. **React**'s often used to build the user interfaces, and handles components rendering, state management, and user interactions.
+2. The Application Layer - aka: 'Logic', 'Business', 'Business Logic', 'Transaction' (and prob more) - **Express** and **Node** act as the intermediaries between the presentation layer and the data layer. They're where we'll contain the business logic and handle requests from the Presentation Layer, as well as communicate with the Database Layer to retrieve and update data.
+3. The Database Layer - aka: 'Data', 'Data Access' Layer - **MongoDB** will be used to manage the storage and retrieval of data. And, idk why, but this is where I tend to geek out, so please do things your own way. I'm sure it'll be much easier.
+
+#### "What About PERN? I Thought You Said You Love PostgreSQL?"
+
+Yes, it's true. I do love PostgreSQL. PERN's cool too. 🐘
+
+However, with **postgres**, we're not exclusive. Feel free to fire up your **pgAdmin4** and have at it.
+
+We have, ahem, an *open* relationship. Very, very *open*. 👀
+
+What? No! 😦 Where'd you get that?
+
+I mean, I like working with *open-source* applications.
+
 I chose MongoDB here because it's a solid open-source app that also works well with Atlas, MongoDB's cloud-based database service. Atlas is a fully-managed system that allows us to deploy, manage, and scale MongoDB databases on the cloud (i.e. without needing to setup and maintain a server to handle hosting for the database).
+
+### "Sounds Great! But, Idk How to Tie My Shoes" 🫤
+
+Well, I'd suggest you go velcro, but... that might be a little dangerous. Let's stick with laceless or just flip-flops for now.
+
+In the meantime, check out **[The MongoDB FAQ and start here](https://www.mongodb.com/docs/manual/faq/fundamentals/)**.
+
+When you're done there, **[go here](https://www.mongodb.com/mern-stack)**.
+
+😐 🕛 🕜 🕒 😐
+
+Did you read through all of it?
+
+No? You just, 'Skimmed some, kinda got the gist'...?
+
+🤨
+
+Alright, no worries.
+
+We'll learn *(mern2earn)* by doing.
 
 ## Why MERN?
 
@@ -76,7 +196,7 @@ It'll ask you what 'type' of application you're building, with the drop-down opt
 
   - I chose *'Content or Task Management'*
 
-You can select your (Pricing / Performanc tier, but for most of us, for now, just start out with the ($Free-99) "M0" tier, which has less storage, slower (shared) access, and so on.
+You can select your Pricing / Performance tier, but for most of us, for now, just start out with the ($Free-99) "M0" tier, which has less storage, slower (shared) access, and so on.
 
 You can also select your 'Provider':
 
@@ -105,7 +225,7 @@ I left the default / 'Recommended' option selected here as well (for me, the Eas
 
 **Congratulations!** 🙌
 
-👉 You've setup your MongoDB Atlast cluster (holla!).
+👉 You've setup your MongoDB Atlas cluster (holla!).
 
 #### Authenticate Your Connection + Add Your IP Address
 
@@ -185,3 +305,31 @@ These options will allow you to manage different aspects of your MongoDB Atlas s
 | giveaways | resource_giveaways |
 | polls | resource_polls |
 | games | resource_games |
+
+---
+
+### .env file
+
+You can do this however, you want. Generally, it's a good idea not to put your passwords, secret keys, ATM PIN #'s, etc out there, for everyone to see, ya?
+
+You can setup your machine's OS method for environment variables, or, a common way it's done in the MERN stck Developer world is to use a package like **dotenv**.
+
+If you want to go that route (which is what I did), you go into your Terminal and type:
+
+`npm install dotenv`
+
+#### "Dude, just show me." 🙈
+
+📺 **[Mot shows the basics of dotevn in 2 minutes](https://www.youtube.com/watch?v=YtkZR0NFd1g)** ⏲️
+
+#### "Too long! I prefer to read about it anyway. What's the website?" 🤓
+
+🏴‍☠️ **[Nonconformist Propaganda Machine - dotenv](https://www.npmjs.com/package/dotenv)** 🗣️
+
+Alright, so anyway, you create your `.env` file (it's literally named just that--kinda like your `.gitignore` file, right? Right: and go and check that file and make sure you're '.gitignoring' your `.env` extension / file as well, before your next `git add`, etc, or you'll feel like a clown 🤡 who races donkeys 🫏 for a living).
+
+In my code, I'm connecting to my MongoDB Atlas cluster inside of the `mongoose.connect()`, and so all I want to do is slightly modify that link with this:
+`MONGODB_URI=mongodb+srv://<myusername>:<mypassword>@learnmern2earn.uptbe18.mongodb.net/?retryWrites=true&w=majority`
+
+- Replace `<username>` with your MongoDB Atlas username.
+- Replace `<password>` with your MongoDB Atlas password.
