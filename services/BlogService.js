@@ -2,22 +2,22 @@
 
 const BlogModel = require("../models/Blog");
 
-exports.getAllBlogs = async () => {
+exports.getAllBlogPosts = async () => {
     return await BlogModel.find();
 };
 
-exports.createBlog = async (blog) => {
+exports.createNewBlogPost = async (blog) => {
     return await BlogModel.create(blog);
 };
 
-exports.getBlogById = async (id) => {
+exports.getBlogPostById = async (id) => {
     return await BlogModel.findById(id);
 };
 
-exports.updateBlog = async (id, blog) => {
+exports.updateBlogPostById = async (id, blog) => {
     return await BlogModel.findByIdAndUpdate(id, blog);
 };
 
-exports.deleteBlog = async (id) => {
+exports.deleteBlogPostById = async (id) => {
     return await BlogModel.findByIdAndDelete(id);
 };

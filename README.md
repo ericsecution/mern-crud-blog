@@ -6,19 +6,154 @@ Welcome to my Blog App (with CRUD operations and automated testing). This App wi
 
 Feel free to fork and/or follow along.
 
-## Uhm... MERN?
+What I recommend is to fork it so that you have a working copy, and go ahead and, duplicate it and `git clone <link-to-repo>` the duplicate.
+
+That way, you're free to experiment a bit on not only your own repo(s), but also on your own machine at home / school / where ever.
+
+However you go about it, this will give you a simple ***MERN***-stack Blog App that's got fully operational CRUD commands, and working API endpoints.
+
+Here's some screenshots of Postman (which is free, and you'll want to **[download here](https://www.postman.com/downloads/)**, if you don't already have it + watch a YouTube tutorial or two, to familiarize yourself with it. Super-simple, but also going to *feel* impossible, if you don't know how to use it).
+
+Initial format for your JSON object:
+
+```json
+{
+  "title": "Blog Post's Title",
+  "body": "The actual Post itself. All the Headings, words, sentences, paragraphs, etc.\n\n##Have Fun With It\n\nI just used escape characters, or, if I \"needed\" to add-in certain formatting, I just added it in, um, in here.\n\n### Maybe I Wanted To Create A Heading?\n\nThen that's what I did.",
+  "image": "IMGurlsbasicallyfrom.unsplashes-api.com/photo/12345=numbers-and-stuff"
+}
+```
+
+The names for the CRUD Commands in Postman differ slightly:
+
+- Create = POST
+- Read = GET
+- Update = PUT
+- Delete = DELETE (*yeah, same*)
+
+So, I used Postman (as one does) to test out my API + the functions that handle different aspects of my CRUD operations:
+
+- getAllBlogPosts()
+
+- createNewBlogPost()
+
+- getBlogPostById(id)
+
+- updateBlogPostById(id)
+
+- deleteBlogPostById(id)
+
+&nbsp;
+
+## Successful Postman Test Results
+
+### Create a New Blog Post (POST)
+
+*Before* hitting 'Send':
+
+![pre-POST (i.e. before hitting 'Send') for the mern-crud-blog app's createNewBlogPost function Postman - getting ready](https://github.com/ericsecution/mern-crud-blog/assets/109568180/3995ca18-b306-4e46-976e-1d91a5df4ffa)
+
+And, after hiting 'Send', it gets it's ***id*** returned:
+
+![After POST for the mern-crud-blog app's createNewBlogPost function - Postman results](https://github.com/ericsecution/mern-crud-blog/assets/109568180/067a704c-c067-4543-90a4-ee7fbded2fb3)
+
+You can see the 'id' highlighted there (above).
+
+### Get All Blog Posts (GET)
+
+![GET mern-crud-blog app's getAllBlogPosts function Postman results](https://github.com/ericsecution/mern-crud-blog/assets/109568180/6e5ecf4e-0d87-4067-adb0-a9d0349306ad)
+
+### Get Blog Post by It's id Number (GET)
+
+![GET mern-crud-blog app's getBlogPostById function Postman results](https://github.com/ericsecution/mern-crud-blog/assets/109568180/a34063a7-bd65-4932-b7ac-7b97ab11715c)
+
+## Update (i.e. Edit) Blog Post by id (PUT)
+
+Change the url (i.e. the API endpoint) in Postman that you're sending to:
+
+`localhost:3001:/api/blogs/<id number>`
+
+![PUT mern-crud-blog app's updateBlogPostById function Postman results](https://github.com/ericsecution/mern-crud-blog/assets/109568180/a9822001-316f-4833-92c8-1d81614ae42f)
+
+Updated part highlighted.
+
+Note: you include the entire JSON object (i.e. "title", "body", and "image" url) in the Update / PUT request as well.
+
+## Delete Blog Post by id (DELETE)
+
+I created some garbage Post, for the purpose of testing out the 'deleteBlogPostById' function:
+
+![Forgettable Post](https://github.com/ericsecution/mern-crud-blog/assets/109568180/f14c8ad3-80d4-41d5-ac26-f754cf74585d)ppwd
+
+No JSON object needed for DELETE, just the API endpoint url and the 'id' number of the Blog Post that you want to Delete.
+
+- Always double-check your id when deleting *anything*.
+
+Here's the API endpoint again (including the prior successful POST's id), similar to how we did it with PUT and the GET (by id):
+
+![Priming the pump for the DELETE of this particular Blog Post](https://github.com/ericsecution/mern-crud-blog/assets/109568180/67112a39-5c21-4aa1-9f4a-72552448784b)
+
+And then here(below) is the Success message, showing that we've successfully deleted the Post:
+
+![Successfully using the DELETE command in Postman, to test the deleteBlogPostById function in the mern-crud-blog repo](https://github.com/ericsecution/mern-crud-blog/assets/109568180/c3116ec6-9b25-490f-a083-ac4d5cb2ba13)
+
+So, there you have it, Success messages (i.e. the '200 OK' response back) for POST, GET, PUT, and DELETE.
+
+Using this code as a template, you should have a working MERN CRUD Blog app 'starter-kit', at the ready.
+
+You have my permission to go make something amazing.
+
+&nbsp;
+
+---
+
+## Wtf... Wdym 'MERN'?
+
+Gotta love acronyms.
+
+Seriously. If you're going to be a Developer:
+
+- You've Got to Love Acronyms, or, "YGtLA" *(is what I always say)*.
+
+- Ok, I made that one up.
+
+However, peep these, my friend, they're all used here:
+
+- CRUD. MERN. API. IDE. JSON.
+
+OOP.
+
+SOLID.
+
+Worth reviewing?
+
+- The **SOLID** principle, which you may have heard when reading about / being taught **Object-Oriented Programming** principles. It's really **5 Principles** that help to keep software systems scalable and easier to maintain.
+
+  - **S** - **The Single Responsibility** Principle encourages each class or module to have only one reason to change, making it easier to understand and maintain.
+
+  - **O** - **The Open/Closed Principle** suggests that entities should be open for extension but closed for modification, allowing new functionality to be added without altering existing code.
+  
+  - **L** - **The Liskov Substitution Principle** promotes the use of inheritance in a way that derived classes can be substituted for their base classes without affecting the correctness of the program.
+  
+  - **D** - The **Dependency Inversion Principle** advocates depending on abstractions rather than concrete implementations, enabling flexibility and decoupling between different components of the system.
+
+### Ok, So Back to the Lecture at Hand
+
+#### MERN
 
 Yeah, (**M**)ongoDB + (**E**)xpress.js + (**R**)eact.js (**N**)ode.js = **MERN**
 
 Make sense?
 
-What's that you say? You 'have a 6th sense, and that sense is the overwhelming feeling that you're too stupid to ever understand this, and yes, it does increase *that* sense' for you?
+What's that you say? You 'have a *6th* sense, and *that* sense is: the overwhelming feeling that you're crazy to think you'd ever understand this, and yes, it does increase *that* sense' for you?
 
 Heh, I can relate.
 
-You're probably not "stupid", just ignorant.
+You're probably not "crazy", just ignorant.
 
-And inexperienced. Well, and... idk if it's something that you ate(?), but you kinda smell funny too.
+![just-ignorant](https://github.com/ericsecution/mern-crud-blog/assets/109568180/bf1d0b6c-8a92-47b6-9a11-5c7d414cbccc)
+
+And inexperienced. Well, and... idk if it's something that you ate(?), but you kinda smell funny too. Don't forget the food chain!
 
 No problem--all fixable. Keep studying. Actually *read* the docs. Keep practicing, searching online for answers, find a mentor, take a shower (although, if you're being mentored in-person, maybe take the shower prior? Don't be afraid: you can control the heat of the water, and you'll have some of your best thinking sessions in there!).
 
@@ -28,7 +163,25 @@ There's no "quick" fix, but there is a "quickest" fix.
 
 Keep after it. Hunt down 'understanding' as if it was meat, and your Family was starving. And, I mean, if you want me to make that analogy, it's actually not that far off, right?
 
-Or... you might *be* stupid (and hey, knowing's half the battle!), and even that's ok. It'll just take a little longer to 'get it'. But 'get it' you shall, my friend.
+Or... you might just *be* ~~stupid~~ crazy.
+
+But hey, the good news?
+
+Knowing is half the battle!
+
+![knowing-is-half-the-battle](https://github.com/ericsecution/mern-crud-blog/assets/109568180/ff7b0d0d-67e5-4ae8-89f1-672ddea2f935)
+
+And even that's ok.
+
+It'll just take a little longer to 'get it'.
+
+But '*get it*' you shall, my friend.
+
+![quick-fix](https://github.com/ericsecution/mern-crud-blog/assets/109568180/dff05716-b988-443e-9b79-c82a19edec9c)
+
+---
+
+&nbsp;
 
 The MERN stack will allow you to become a developer superhero aka a ***full stack developer***.
 
@@ -40,13 +193,69 @@ If you're ready to get started, we need to make sure we've got a few things inst
 
 `mongodb -v`
 
+`mongoose -v`
+
 If not, go ahead and `npm install <whatever-you-don't-have>`
 
 If you don't have **Node.js**, however, you may wish to **[visit the npm docs here first](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)**.
 
+I also used **nodemon** for development, and kept it's default for auto-restart of the node app, so I could troubleshoot and console.log right into my Terminal.
+
+`npm install nodemon`
+
+#### From within my `package.json` file"
+
+```json
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "mocha --timeout 10000"
+  },
+```
+
+```json
+ "homepage": "https://github.com/ericsecution/mern-crud-blog#readme",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "^5.7.0",
+    "mongoose": "^5.13.20",
+    "npm": "^9.8.1"
+  },
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "chai-http": "^4.4.0",
+    "mocha": "^10.2.0"
+  }
+```
+
+### What About Testing?
+
+Yeah, as you can see above, I'm using **[Chai for Testing - Click Here for more info](https://www.chaijs.com/)**:
+
+  `npm install chai`
+
+What we're doing, essentially, is using **[the Mocha testing framework](https://mochajs.org/)**
+
+  `npm install mocha`
+
+And so that adds in **Mocha** along with the Chai assertion library, which is configured to be used with **[the chai-http plugin](https://www.chaijs.com/plugins/chai-http/)**.
+
+  `npm install chai-http`
+
+From there, you can start with the tests that I've created and/or just add more (see their websites above, for a number of different examples and walk-thrus.)
+
+---
+
+&nbsp;
+
+### MongoDB Atlas
+
 You don't *have* to do this, but I also created an Atlas account (it's free). If you want to as well, just **[head over to MongoDB Atlas](https://www.mongodb.com/)**, in order to use their server to host the database.
 
-#### Where Was I...?
+&nbsp;
+
+### Let's Get This MERN Stack Blog App Started
 
 Ahh yes, the **MERN** stack. Simple, but there's *a lot* that you could learn about it, so it's kind of a best-of-both-worlds in that it's easy to get started, and there's a lot of room for growth, increased skill, and a lot you can do with it.
 
@@ -138,16 +347,18 @@ MERN is a popular full-stack combination of technologies that have a proven trac
 ## Paying it Forward
 
 - my goal is to empower us (you and me)--if you're a builder(, creator, developer, etc)--to both:
-- have a starting point that lends itself easily to creative expression
-- and in the hope that it will inspire you to build something that also helps people build something (a ripple-effect approach to learning)
-- and then to do it all in a seamless and intuitive fashion
+  - have a starting point that lends itself easily to creative expression
+  - and in the hope that it will inspire you to build something that also helps people build something (a ripple-effect approach to learning)
+  - and then to do it all in a seamless and intuitive fashion
   
   Easy enough?
 
 - this App should be practical enough too, ya?
-- again: it's a Blog
-- That doesn't mean that it can't solve real-world problems
-- by using the MERN stack, it should be user-friendly and give you additional flexibility for a variety of use-cases
+  - again: it's a Blog
+  - That doesn't mean that it can't solve real-world problems
+  - by using the MERN stack, it should be user-friendly and give you additional flexibility for a variety of use-cases
+
+&nbsp;
 
 Since I began developing (more seriously) last year (incl attending and graduating from a Full-Stack Developer Bootcamp), I've been on a non-stop learning endeavor.
 
@@ -308,11 +519,11 @@ These options will allow you to manage different aspects of your MongoDB Atlas s
 
 ---
 
-### .env file
+### The .env file
 
 You can do this however, you want. Generally, it's a good idea not to put your passwords, secret keys, ATM PIN #'s, etc out there, for everyone to see, ya?
 
-You can setup your machine's OS method for environment variables, or, a common way it's done in the MERN stck Developer world is to use a package like **dotenv**.
+If you're just creating a copy of this on your local machine, you can setup your machine's OS method for environment variables, or, a common way it's done in the **MERN** stack *Developer* world (i.e. if you're gonna `git push` this could into a public / online repository) is to use a package like **dotenv** (created by the Developer, **Mot**).
 
 If you want to go that route (which is what I did), you go into your Terminal and type:
 
@@ -326,7 +537,7 @@ If you want to go that route (which is what I did), you go into your Terminal an
 
 🏴‍☠️ **[Nonconformist Propaganda Machine - dotenv](https://www.npmjs.com/package/dotenv)** 🗣️
 
-Alright, so anyway, you create your `.env` file (it's literally named just that--kinda like your `.gitignore` file, right? Right: and go and check that file and make sure you're '.gitignoring' your `.env` extension / file as well, before your next `git add`, etc, or you'll feel like a clown 🤡 who races donkeys 🫏 for a living).
+Alright, so anyway, you create your `.env` file (it's literally named just that--kinda like your `.gitignore` file, right? Right: and go and check that file and make sure you're '.gitignoring' your `.env` extension(s) / file as well, before your next `git add`, etc, or you'll feel like a clown 🤡 who races donkeys 🫏 for a living, because you'll have just uploaded all of the passwords you were attempting to obscure).
 
 In my code, I'm connecting to my MongoDB Atlas cluster inside of the `mongoose.connect()`, and so all I want to do is slightly modify that link with this:
 `MONGODB_URI=mongodb+srv://<myusername>:<mypassword>@learnmern2earn.uptbe18.mongodb.net/?retryWrites=true&w=majority`

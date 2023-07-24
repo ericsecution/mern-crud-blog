@@ -2,45 +2,45 @@
 
 const blogService = require("../services/BlogService");
 
-exports.getAllBlogs = async (req, res) => {
+exports.getAllBlogPosts = async (req, res) => {
     try {
-        const blogs = await blogService.getAllBlogs();
+        const blogs = await blogService.getAllBlogPosts();
         res.json({ data: blogs, status: "success" });
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
 };
 
-exports.createBlog = async (req, res) => {
+exports.createNewBlogPost = async (req, res) => {
     try {
-        const blog = await blogService.createBlog(req.body);
+        const blog = await blogService.createNewBlogPost(req.body);
         res.json({ data: blog, status: "success" });
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
 };
 
-exports.getBlogById = async (req, res) => {
+exports.getBlogPostById = async (req, res) => {
     try {
-        const blog = await blogService.getBlogById(req.params.id);
+        const blog = await blogService.getBlogPostById(req.params.id);
         res.json({ data: blog, status: "success" });
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
 };
 
-exports.updateBlog = async (req, res) => {
+exports.updateBlogPostById = async (req, res) => {
     try {
-        const blog = await blogService.updateBlog(req.params.id, req.body);
+        const blog = await blogService.updateBlogPostById(req.params.id, req.body);
         res.json({ data: blog, status: "success" });
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
 };
 
-exports.deleteBlog = async (req, res) => {
+exports.deleteBlogPostById = async (req, res) => {
     try {
-        const blog = await blogService.deleteBlog(req.params.id);
+        const blog = await blogService.deleteBlogPostById(req.params.id);
         res.json({ data: blog, status: "success" });
     } catch (err) {
         res.status(500).json({ error: err.message });
