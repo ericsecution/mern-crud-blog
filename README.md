@@ -83,7 +83,7 @@ Note: you include the entire JSON object (i.e. "title", "body", and "image" url)
 
 I created some garbage Post, for the purpose of testing out the 'deleteBlogPostById' function:
 
-![Forgettable Post](https://github.com/ericsecution/mern-crud-blog/assets/109568180/f14c8ad3-80d4-41d5-ac26-f754cf74585d)ppwd
+![Forgettable Post](https://github.com/ericsecution/mern-crud-blog/assets/109568180/f14c8ad3-80d4-41d5-ac26-f754cf74585d)
 
 No JSON object needed for DELETE, just the API endpoint url and the 'id' number of the Blog Post that you want to Delete.
 
@@ -134,6 +134,8 @@ Worth reviewing?
   - **O** - **The Open/Closed Principle** suggests that entities should be open for extension but closed for modification, allowing new functionality to be added without altering existing code.
   
   - **L** - **The Liskov Substitution Principle** promotes the use of inheritance in a way that derived classes can be substituted for their base classes without affecting the correctness of the program.
+
+  - **I** - **The Interface Segregation Principle** states that clients should not be forced to depend on interfaces they don't use.
   
   - **D** - The **Dependency Inversion Principle** advocates depending on abstractions rather than concrete implementations, enabling flexibility and decoupling between different components of the system.
 
