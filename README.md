@@ -245,7 +245,31 @@ And so that adds in **Mocha** along with the Chai assertion library, which is co
 
   `npm install chai-http`
 
-From there, you can start with the tests that I've created and/or just add more (see their websites above, for a number of different examples and walk-thrus.)
+In order to keep my testing data separate from my App data (and since MongoDB only allows one database per *Project* for Free-tier Atlas accounts), I created a separate ***Collection*** within my MongoDB Atlas cluster, `ests_dev_data`.
+
+I then essentially mirrored the flow of data, but for testing purposes (with the aim to keep it separate both within the codebase, as well as the database).
+
+That *"flow"* goes from:
+
+- *models*
+- to *services*
+- *controllers*
+- *routes*
+- *app*
+- *database*
+- *repeat*
+
+That being said, we have a `./models/TestDevData.js` file that provides schema for the *Test* Blog Posts.
+
+Then, we utilize the **Mongoose** library's functions (i.e. `find()`, `create()`, `findById()`, `findByIdAndUpdate()`, and `findByIdAndDelete()`) within the `./services/TestDevDataServices.js` file, using **Object Data Modeling** (**ORM**) which assists **Node.js** in communicating with the **MongoDB** database (specifically, the 'tests_dev_data' ***Collection***, in this case, that I needed to 'Create' via the 'Collections' tab over in my **MongoDB Atlas** account).
+
+From there, you can start with the tests that I've created and/or just add more (see their websites above, for a number of different examples and walk-thrus), but for a basic setup, this should allow you to create your tests as you go.
+
+![All chai tests passed, nice!](https://github.com/ericsecution/mern-crud-blog/assets/109568180/1ad2579f-dc8b-4773-b7e1-2e6f54bd92fa)
+
+If you add-on new features for your Blog app, add-on the Test(s) as well.
+
+Simple and easy enough, right?
 
 ---
 
@@ -253,7 +277,7 @@ From there, you can start with the tests that I've created and/or just add more 
 
 ### MongoDB Atlas
 
-You don't *have* to do this, but I also created an Atlas account (it's free). If you want to as well, just **[head over to MongoDB Atlas](https://www.mongodb.com/)**, in order to use their server to host the database.
+You don't *have* to do this, but (as mentioned already) I also created an Atlas account (it's free--or, rather, there's a free *option*, which is what I used). If you want to as well, just **[head over to MongoDB Atlas](https://www.mongodb.com/)**, and then create an account and a database "cluster", in order to use their server to host the database.
 
 &nbsp;
 
@@ -261,9 +285,11 @@ You don't *have* to do this, but I also created an Atlas account (it's free). If
 
 Ahh yes, the **MERN** stack. Simple, but there's *a lot* that you could learn about it, so it's kind of a best-of-both-worlds in that it's easy to get started, and there's a lot of room for growth, increased skill, and a lot you can do with it.
 
-Maybe that's a "best-of-*all*-worlds" type situation? Idk.
+Maybe that's a "best-of-*all*-worlds" type situation? 🤔
 
-Anyway, in general, it came about as a (relatively) modern solution to the object-oriented design foundation of a 3-tier architecture in software development--which (you guessed it!) has 3 tiers, made up of our logical layers.
+Idk.
+
+Anyway, it came about as a (relatively) modern solution to the **object-oriented design** foundation of a **3-tier architecture** in software development--which (you guessed it!) has 🥁 ... 3 *tiers*, made up of our logical *layers*.
 
 ### Layers vs Tiers - "Wait, so... which is which?"
 
@@ -301,9 +327,9 @@ I've heard it described (paraphrasing, so dyor, study code, style guides, read b
 
 #### Ok, So What's What In Our MERN Stack?
 
-1. The Presentation Layer - aka: 'Web', 'Interface', 'UI', 'Client' Layer - responsible for handling user interactions and displaying information to the users. **React**'s often used to build the user interfaces, and handles components rendering, state management, and user interactions.
-2. The Application Layer - aka: 'Logic', 'Business', 'Business Logic', 'Transaction' (and prob more) - **Express** and **Node** act as the intermediaries between the presentation layer and the data layer. They're where we'll contain the business logic and handle requests from the Presentation Layer, as well as communicate with the Database Layer to retrieve and update data.
-3. The Database Layer - aka: 'Data', 'Data Access' Layer - **MongoDB** will be used to manage the storage and retrieval of data. And, idk why, but this is where I tend to geek out, so please do things your own way. I'm sure it'll be much easier.
+1. **The Presentation Layer** - aka: 'Web', 'Interface', 'UI', 'Client' Layer - responsible for handling user interactions and displaying information to the users. **React**'s often used to build the user interfaces, and handles components rendering, state management, and user interactions.
+2. **The Application Layer** - aka: 'Logic', 'Business', 'Business Logic', 'Transaction' (and prob more) - **Express** and **Node** act as the intermediaries between the presentation layer and the data layer. They're where we'll contain the business logic and handle requests from the Presentation Layer, as well as communicate with the Database Layer to retrieve and update data.
+3. **The Database Layer** - aka: 'Data', 'Data Access' Layer - **MongoDB** will be used to manage the storage and retrieval of data. And, idk why, but this is where I tend to geek out, so please do things your own way. I'm sure it'll be much easier.
 
 #### "What About PERN? I Thought You Said You Love PostgreSQL?"
 
